@@ -11,7 +11,7 @@ function Video({ video }) {
         <Link to={`/video/${video?.videoId}`}>
         <div className="flex flex-col">
     
-        <div className="relative h-48 md:h-56 md: rounded-xl hover:rounded-none duration-200 overflow-hidden">
+        <div className="relative h-48 md:h-50 md: rounded-xl hover:rounded-none duration-200 overflow-hidden">
             <img className="h-full w-full" src={video?.thumbnails[0]?.url} alt="" />
             {video?.lengthSeconds && <Time time={video?.lengthSeconds} />}
         </div>
