@@ -14,10 +14,10 @@ function Navbar() {
           <img src={youtube} alt='' className='w-24 cursor-pointer'></img> 
           </div>
         <div className='flex w-[40%] '>
-          <div className='w-[100%] px-3 py-2 border rounded-l-full' >
+          <div className='w-[100%] px-3 py-2 border border-gray-400 rounded-l-full' >
           <input type ='text'placeholder='Search' className='outline-none'/>
           </div>
-          <button className='px-4 py-2 border bg-gray-200 rounded-r-full'>
+          <button className='px-4 py-2 border  border-gray-400 bg-gray-200 rounded-r-full'>
           <CiSearch size={'24px'}/>
           </button>
           <button>
