@@ -28,7 +28,7 @@ function ListItems() {
         return (
           <div
             key={category}
-            className="mb-4 flex-none bg-gray-200 hover:bg-gray-300 duration-300 rounded-xl px-3 py-1 font-medium text-gray-700 cursor-pointer" >
+            className="mb-3 flex-none bg-gray-200 hover:bg-gray-300 duration-300 rounded-xl px-3 py-1 font-medium text-gray-700 cursor-pointer" >
             {category}
           </div>
         );
