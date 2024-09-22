@@ -5,6 +5,7 @@ import ReactPlayer from "react-player";
 import { AiOutlineLike } from "react-icons/ai";
 import { abbreviateNumber } from "js-abbreviation-number";
 import { BsFillCheckCircleFill } from "react-icons/bs";
+import SuggestVideo from "./SuggestVideo";
 
 function PlayVideo() {
   const [video, setVideo] = useState();
@@ -96,7 +97,12 @@ function PlayVideo() {
             {video?.stats?.comments} <p>Comments</p>
           </div>
         </div>
-        
+        <div className="flex flex-col px-4 py-6 h-[calc(100vh-4.625rem)] overflow-y-scroll overflow-x-hidden lg:w-[350px] xl:w-[400px]">
+          {realatedVideo?.contents?.map((item, index) => {
+            if (item?.type !== "video") return false;
+            return <SuggestVideo key={index} video={item?.video} />;
+          })}
+        </div>
         </div>
     </div>
     
