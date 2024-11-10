@@ -61,7 +61,7 @@ function PlayVideo() {
           </div>
 
           <div className="font-bold text-sm md:text-xl mt-4 line-clamp-2">
-            {video?.title || "No title available"} {/* Use fallback text */}
+            {video?.title}
           </div>
           <div className="flex justify-between flex-col md:flex-row mt-4">
             <div className="flex ">
@@ -69,21 +69,21 @@ function PlayVideo() {
                 <div className="flex h-11 w-11 rounded-full overflow-hidden">
                   <img
                     className="h-full w-full object-cover"
-                    src={video?.author?.avatar?.[0]?.url || ""}
-                    alt="Author"
+                    src={video?.author?.avatar?.[0]?.url }
+                    
                   />
                 </div>
               </div>
               <div className="flex space-x-5">
                 <div className="flex flex-col ml-3">
                   <div className="text-md font-semibold flex items-center">
-                    {video?.author?.title || "Unknown Author"}
+                  {video?.author?.title}
                     {video?.author?.badges?.[0]?.type === "VERIFIED_CHANNEL" && (
                       <BsFillCheckCircleFill className="text-white/[0.5] text-[12px] ml-1" />
                     )}
                   </div>
                   <div className="text-sm">
-                    {video?.author?.stats?.subscribersText || "No subscribers"}
+                  {video?.author?.stats?.subscribersText}
                   </div>
                 </div>
                 <span className="mt-1 text-center bg-red-500 px-3 pt-2 rounded-full text-white cursor-pointer hover:bg-red-700 duration-200 ">
@@ -102,7 +102,7 @@ function PlayVideo() {
             </div>
           </div>
           <div className="p-4 bg-gray-100 rounded-xl mt-4 text-sm">
-            {video?.description || "No description available"}
+            {video?.description }
           </div>
           <div className="flex gap-x-6 font-semibold rounded-xl mt-4 text-xl">
             {video?.stats?.comments || 0} <p>Comments</p>
@@ -119,4 +119,4 @@ function PlayVideo() {
   );
 }
 
-export default PlayVideo;
+export default PlayVideo
